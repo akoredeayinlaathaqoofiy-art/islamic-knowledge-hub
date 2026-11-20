@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Islamic Knowledge Hub - Learn Islam in English and Arabic.">
+<title>Islamic Knowledge Hub</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f5;
+  color: #24352b;
+  line-height: 1.7;
+}
+
+header {
+  background: #075b3c;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 27px;
+}
+
+header p {
+  color: #d9eee2;
+}
+
+nav {
+  background: #06452f;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #b8edc8;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 18px;
+  background: linear-gradient(135deg, #e1f2e6, #ffffff);
+}
+
+.hero h2 {
+  color: #075b3c;
+  font-size: 29px;
+}
+
+.hero p {
+  margin: 15px auto;
+  max-width: 600px;
+}
+
+button {
+  background: #087348;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #06452f;
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 35px 18px;
+}
+
+.section-title {
+  text-align: center;
+  color: #075b3c;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000c;
+  border: 1px solid #e5eee7;
+}
+
+.card h3 {
+  color: #087348;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #087348;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.arabic {
+  direction: rtl;
+  text-align: right;
+  font-size: 21px;
+  line-height: 2;
+}
+
+.assistant {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  max-width: 650px;
+  margin: auto;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.assistant input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin: 12px 0;
+  font-size: 15px;
+}
+
+#answer {
+  margin-top: 15px;
+  padding: 12px;
+  background: #edf7ef;
+  border-radius: 7px;
+  display: none;
+}
+
+footer {
+  background: #06452f;
+  color: white;
+  text-align: center;
+  padding: 25px 12px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #d5f5df;
+}
+
+.lang-btn {
+  margin-top: 15px;
+  background: #d5f5df;
+  color: #06452f;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>☪ Islamic Knowledge Hub</h1>
+  <p>English and Arabic Islamic Education</p>
+  <button class="lang-btn" onclick="toggleLanguage()">
+    العربية / English
+  </button>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#quran">Qur'an</a>
+  <a href="#hadith">Hadith</a>
+  <a href="#articles">Articles</a>
+  <a href="#arabic">Arabic</a>
+  <a href="#assistant">AI Assistant</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2 id="welcome">Welcome to Islamic Knowledge Hub</h2>
+  <p id="intro">
+    Discover authentic Islamic knowledge, learn the Qur'an,
+    explore Hadith, and improve your understanding of Islam.
+  </p>
+  <button onclick="document.getElementById('assistant').scrollIntoView()">
+    Ask a Question
+  </button>
+</section>
+
+<section class="container" id="quran">
+  <h2 class="section-title">📖 The Holy Qur'an</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Read the Qur'an</h3>
+      <p>Read the Holy Qur'an and explore its chapters.</p>
+      <a href="https://quran.com/" target="_blank">Open Qur'an →</a>
+    </div>
+
+    <div class="card">
+      <h3>Qur'an Translation</h3>
+      <p>Explore Qur'an translations and understand its meanings.</p>
+      <a href="https://quran.com/" target="_blank">Explore →</a>
+    </div>
+
+    <div class="card">
+      <h3>Tafsir</h3>
+      <p>Study explanations and interpretations of Qur'anic verses.</p>
+      <a href="https://quran.com/" target="_blank">Study Tafsir →</a>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="hadith">
+  <h2 class="section-title">📚 Hadith and Sunnah</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Sahih al-Bukhari</h3>
+      <p>Explore narrations from Sahih al-Bukhari.</p>
+      <a href="https://sunnah.com/bukhari" target="_blank">Read Hadith →</a>
+    </div>
+
+    <div class="card">
+      <h3>Sahih Muslim</h3>
+      <p>Study authentic narrations from Sahih Muslim.</p>
+      <a href="https://sunnah.com/muslim" target="_blank">Read Hadith →</a>
+    </div>
+
+    <div class="card">
+      <h3>Other Hadith Collections</h3>
+      <p>Explore other Hadith books and collections.</p>
+      <a href="https://sunnah.com/" target="_blank">Explore →</a>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="articles">
+  <h2 class="section-title">🕌 Islamic Studies</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Aqidah</h3>
+      <p>Learn Islamic creed, Tawheed and the foundations of faith.</p>
+    </div>
+
+    <div class="card">
+      <h3>Fiqh</h3>
+      <p>Study Islamic jurisprudence and acts of worship.</p>
+    </div>
+
+    <div class="card">
+      <h3>Tafsir and Hadith Studies</h3>
+      <p>Develop your understanding of Islamic texts.</p>
+    </div>
+
+    <div class="card">
+      <h3>Islamic History</h3>
+      <p>Discover the history of Islam and the lives of scholars.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="arabic">
+  <h2 class="section-title">اللغة العربية والدراسات الإسلامية</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>تعلم اللغة العربية</h3>
+      <p class="arabic">تعلم المفردات والقواعد والقراءة والكتابة.</p>
+    </div>
+
+    <div class="card">
+      <h3>العقيدة الإسلامية</h3>
+      <p class="arabic">تعلم أصول الإيمان والتوحيد.</p>
+    </div>
+
+    <div class="card">
+      <h3>الفقه الإسلامي</h3>
+      <p class="arabic">دراسة الأحكام الشرعية وأبواب العبادات.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="assistant">
+  <h2 class="section-title">🤖 Islamic AI Assistant</h2>
+
+  <div class="assistant">
+    <h3>Ask Your Islamic Questions</h3>
+    <p>
+      Ask questions about Islam, the Qur'an, Hadith,
+      Arabic language and general website information.
+    </p>
+
+    <input
+      type="text"
+      id="question"
+      placeholder="Type your question here..."
+    >
+
+    <button onclick="askQuestion()">Send Question</button>
+
+    <div id="answer">
+      The AI assistant is not connected yet.
+      We will activate it after setting up the secure AI service.
+    </div>
+
+    <p style="font-size:12px;margin-top:15px;color:#777">
+      Important: Verify religious answers with qualified Islamic scholars.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <h3>☪ Islamic Knowledge Hub</h3>
+  <p>Knowledge, Faith and Guidance</p>
+  <p>English and Arabic Islamic Education</p>
+  <p>© 2026 Islamic Knowledge Hub. All rights reserved.</p>
+</footer>
+
+<script>
+let arabicMode = false;
+
+function toggleLanguage() {
+  arabicMode = !arabicMode;
+
+  document.documentElement.lang =
+    arabicMode ? "ar" : "en";
+
+  document.getElementById("welcome").textContent =
+    arabicMode
+    ? "مرحبا بكم في مركز المعرفة الإسلامية"
+    : "Welcome to Islamic Knowledge Hub";
+
+  document.getElementById("intro").textContent =
+    arabicMode
+    ? "اكتشفوا العلوم الإسلامية وتعلموا القرآن الكريم والحديث الشريف."
+    : "Discover authentic Islamic knowledge, learn the Qur'an, explore Hadith, and improve your understanding of Islam.";
+}
+
+function askQuestion() {
+  const question =
+    document.getElementById("question").value.trim();
+
+  if (!question) {
+    alert("Please enter your question.");
+    return;
+  }
+
+  document.getElementById("answer").style.display = "block";
+  document.getElementById("answer").textContent =
+    "Thank you for your question! The AI assistant will be activated when we connect the secure AI service. Your question: " + question;
+}
+</script>
+
+</body>
+</html>
